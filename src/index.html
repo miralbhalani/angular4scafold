@@ -1,5 +1,6 @@
+
 <!doctype html>
-<html lang="en">
+<html *ngIf="isLoggedIn" lang="en">
 <head>
   <meta charset="utf-8">
   <title>Web</title>
@@ -7,8 +8,49 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+    <!-- Bootstrap -->
+    <link href="../../assets/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../assets/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../assets/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../../assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../../assets/gentelella/build/css/custom.min.css" rel="stylesheet">
+
+
 </head>
-<body>
-  <app-root></app-root>
+<body class="nav-md">
+    <app-login></app-login>
+    <app-root></app-root>
+    
 </body>
 </html>
+
+
+<script src="../../assets/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../assets/gentelella/vendors/fastclick/lib/fastclick.js"></script>
+<script src="../../assets/gentelella/vendors/nprogress/nprogress.js"></script>
+<script src="../../assets/gentelella/vendors/Chart.js/dist/Chart.min.js"></script>
+<script src="../../assets/gentelella/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="../../assets/gentelella/vendors/Flot/jquery.flot.js"></script>
+<script src="../../assets/gentelella/vendors/Flot/jquery.flot.pie.js"></script>
+<script src="../../assets/gentelella/vendors/Flot/jquery.flot.time.js"></script>
+<script src="../../assets/gentelella/vendors/Flot/jquery.flot.stack.js"></script>
+<script src="../../assets/gentelella/vendors/Flot/jquery.flot.resize.js"></script>
+<script src="../../assets/gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script src="../../assets/gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+<script src="../../assets/gentelella/vendors/flot.curvedlines/curvedLines.js"></script>
+<script src="../../assets/gentelella/vendors/DateJS/build/date.js"></script>
+<script src="../../assets/gentelella/vendors/moment/min/moment.min.js"></script>
+<script src="../../assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../../assets/gentelella/build/js/custom.js"></script>
+
+
+
+<!--<script src="../../assets/temp.js"></script>-->

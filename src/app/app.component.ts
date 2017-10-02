@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LocalStorageService } from 'angular-2-local-storage';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private localStorageService:LocalStorageService,
+              private userService:UserService){
+  }
+
+  logout(){
+    location.reload();
+  }
 }

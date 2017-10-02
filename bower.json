@@ -1,0 +1,21 @@
+{
+  "name": "web",
+  "description": "",
+  "main": "",
+  "authors": [
+    "surjeet.b <miralb_productivet@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "gentelella": "^1.4.0"
+  }
+}

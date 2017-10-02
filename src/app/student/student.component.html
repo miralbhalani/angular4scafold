@@ -1,0 +1,58 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Full Name
+      </th>
+      <th>
+        Collage ID
+      </th>
+      <th>
+        Engrip User ID
+      </th>
+      <th>
+        Roll Number
+      </th>
+      <th>
+        Phone Number
+      </th>
+      <th>
+        Branch Id
+      </th>
+      <th>
+        Year Of Graduation
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students" >
+      <td>
+        {{student.id}}
+      </td>
+      <td>
+        {{student.full_name}}
+      </td>
+      <td>
+        {{student.collage_id}}
+      </td>
+      <td>
+        {{student.engrip_user_id}}
+      </td>
+      <td>
+        {{student.roll_number}}
+      </td>
+      <td>
+        {{student.phone_number}}
+      </td>
+      <td>
+        {{student.branch_id}}
+      </td>
+      <td>
+        {{student.year_of_graduation}}
+      </td>
+    </tr>
+  </tbody>
+</table>
