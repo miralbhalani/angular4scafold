@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LocalStorageService } from 'angular-2-local-storage';
-import { UserService } from './user.service';
+import { UserService } from './shared/user.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,7 @@ export class AppComponent {
   }
 
   logout(){
+    this.userService.logout()
     location.reload();
   }
 }

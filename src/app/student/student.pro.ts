@@ -1,6 +1,6 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http'; 
 import { Observable } from 'rxjs/Rx'; 
-import { UserService } from '../user.service'; 
+import { UserService } from '../shared/user.service'; 
 
 
 export class StudentPro {

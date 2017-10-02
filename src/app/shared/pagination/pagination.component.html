@@ -1,0 +1,62 @@
+<div class="row">
+   <div class="col-sm-5">
+      <div class="dataTables_info" id="datatable-responsive_info" role="status" aria-live="polite">Showing {{from}} to {{to}} of {{total}} entries</div>
+   </div>
+   <div class="col-sm-7">
+      <div class="dataTables_paginate paging_simple_numbers" id="datatable-responsive_paginate">
+         <ul class="pagination">
+
+
+                        <!--class = "{{previousDesable()?'disabled':''}}"-->
+                        <!--[ngClass] = "{'paginate_button':true,
+                                'previous':true,
+                                'disabled':previousDesable()}"-->
+            <li 
+                (click)="previous()" 
+                [ngClass] = "{'paginate_button':true,
+                                    'previous':true,
+                                    'disabled':previousDesable()}"
+                        id="datatable-responsive_previous">
+
+                <a style="cursor: pointer"
+                    tabindex="0">
+                        Previous
+                </a>
+            </li>
+            
+            <li *ngFor="let cPage of totalPages" 
+                [ngClass] = "{'paginate_button':true,'active':(page==cPage)}">
+                <span style="cursor: pointer" (click)="pChange(cPage)" aria-controls="datatable-responsive"  tabindex="0">{{cPage}}</span>
+            </li>
+
+            <!--<li *ngFor="let cPage of totalPages" 
+                [ngClass] = "{'paginate_button':true,'active':(page==cPage)}">
+                <a [routerLink]="['/students']" [queryParams]="{page:cPage}" aria-controls="datatable-responsive"  tabindex="0">{{cPage}}</a>
+            </li>-->
+            
+
+            <li (click)="next()" 
+                        [ngClass] = "{'paginate_button':true,
+                                'next':true,
+                                'disabled':nextDesable()}"
+                        id="datatable-responsive_next">
+                <span style="cursor: pointer" tabindex="0">
+                    Next
+                </span>
+            </li>
+            
+            <!--<li (click)="next()" 
+                        [ngClass] = "{'paginate_button':true,
+                                'next':true,
+                                'disabled':nextDesable()}"
+                        id="datatable-responsive_next">
+                <a [routerLink]="['/students']" 
+                    [queryParams]="{page:getNextPage()}"  
+                    tabindex="0">
+                    Next
+                </a>
+            </li>-->
+         </ul>
+      </div>
+   </div>
+</div>

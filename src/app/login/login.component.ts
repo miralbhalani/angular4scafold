@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {patternValidator} from "../shared/pattern-validator";
 import { LocalStorageService } from 'angular-2-local-storage';
-import { UserService } from '../user.service';
+import { UserService } from '../shared/user.service';
 
 import {HttpClient} from "@angular/common/http";
 
@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    // http://localhost:3000/
     this.http.post<any>("login",
                 {
                   "email":this.loginForm.value.email,

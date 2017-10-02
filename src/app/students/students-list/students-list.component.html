@@ -1,0 +1,81 @@
+
+<a routerLink="/students/create" class="btn btn-success" >Create</a>
+<form [formGroup]="pageForm" (ngSubmit) = "submit()" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+      
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Full Name</th>
+      <th>Collage Name</th>
+      <th>Engrip User ID</th>
+      <th>Roll Number</th>
+      <th>Phone Number</th>
+      <th>Branch Id</th>
+      <th>Year Of Graduation</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <th>
+        <input formControlName="id"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th>
+        <input formControlName="full_name"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th>
+        <input formControlName="collage_name"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th>
+        <input formControlName="engrip_user_id"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th>
+        <input formControlName="roll_number"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th>
+        <input formControlName="phone_number"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th>
+        <input formControlName="branch_id"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th>
+        <input formControlName="year_of_graduation"  
+              type="text" 
+              class="form-control">
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students" >
+      <td>{{student.id}}</td>
+      <td>{{student.full_name}}</td>
+      <td>{{student.collage?.collage_name}}</td>
+      <td>{{student.engrip_user_id}}</td>
+      <td>{{student.roll_number}}</td>
+      <td>{{student.phone_number}}</td>
+      <td>{{student.branch_id}}</td>
+      <td>{{student.year_of_graduation}}</td>
+      <td>
+        <a [routerLink]="['/students/view/', student.id]"><i class="fa fa-eye"></i></a>
+        <a [routerLink]="['/students/update/', student.id]"><i class="fa fa-edit"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button style="display: none" type="submit"  class="btn btn-success">Submit</button>
+</form>
+<app-pagination (pageChange)="pageChange($event)" [pageOptions]="pageOptions" ></app-pagination>
